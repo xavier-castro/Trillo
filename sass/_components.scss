@@ -139,11 +139,24 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        display: flex; // will automatically put the items side by side
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: .5rem; // Adds margin bottom to all except the last
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1; // The 4 flex items will grow as much as they can, occupying the same space
         }
     }
 
@@ -187,6 +200,10 @@
         // Align SVGs with span text
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+        }
     }
 
     &__icon {
@@ -205,6 +222,10 @@
     color: var(--color-gray-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none // hides legal text
+    }
 }
 
 ////////////////////////////////////////////
@@ -398,7 +419,9 @@
         margin-right: auto; // puts space between sentence and photos
     }
 
-    &__friends {}
+    &__friends {
+        display: flex; // friends will display side by side all the time
+    }
 
     &__photo {
         box-sizing: content-box; // makes images stay same size even with an added border
@@ -409,7 +432,7 @@
 
         // Giving a negative margin to the photos will give the overlapping look
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -425,6 +448,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -487,6 +515,10 @@
     padding: 3.5rem 0;
     text-align: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
+
     &__book-now {
         font-size: 1.5rem;
         font-weight: 300;
@@ -510,7 +542,7 @@
     overflow: hidden;
     cursor: pointer;
 
-    & > * {
+    &>* {
         height: 100%;
         width: 100%;
         display: inline-block; // needed to provide padding

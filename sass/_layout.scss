@@ -6,6 +6,12 @@
 
     // TODO: Delete when done testing
     min-height: 50rem; // testing purposes
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0; // Removes the pink background
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
@@ -23,6 +29,10 @@
 // Enabling flexbox for sidebar and hotel view
 .content {
     display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column; // moves sidebar navigation to the top and hotel overview beneath it
+    }
 }
 
 .sidebar {
@@ -49,6 +59,10 @@
     padding: 4.5rem;
     background-color: var(--color-gray-light-1);
     border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
 }
 
 .description {
@@ -57,6 +71,11 @@
     padding: 3rem;
     flex: 0 0 60%; // fills out 60% of the container
     margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
 }
 
 .user-reviews {
