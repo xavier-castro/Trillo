@@ -1,0 +1,100 @@
+////////////////////////////////////////////
+// LOGO
+.logo {
+    height: 3.25rem;
+    margin-left: 3rem;
+}
+
+
+////////////////////////////////////////////
+// SEARCH
+.search {
+    flex: 0 0 40%; // search bar will occupy 40% of the header
+
+    // Flex item is now becoming a flex container
+    display: flex;
+    align-items: center; // centers along the cross axis
+    justify-content: center; // centers along the main axis
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+
+        background-color: var(--color-gray-light-2);
+
+        border: none;
+        border-radius: 100px; // rounded edges for search bar
+        padding: .7rem 2rem;
+        width: 90%;
+
+        transition: all .2s;
+
+        margin-right: -3.5rem; // Button will move on top of the input
+
+        &:focus {
+            outline: none;
+            width: 100%; // 90% to 100% gives us the nice zoom animation
+            background-color: var(--color-gray-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-gray-light-4);
+        }
+    }
+
+    // Selects the sibling
+    &__input:focus+&__button {
+        background-color: var(--color-gray-light-3); // button becomes same color as the input
+    }
+
+    &__button {
+        border: none;
+
+        background-color: var(--color-gray-light-2);
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+
+    }
+
+    // To format SVGs you mainly deal with height and width
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-gray-dark-3); // colors SVGs
+    }
+}
+
+
+
+
+////////////////////////////////////////////
+// USER NAVIGATION
+.user-nav {
+    background-color: greenyellow;
+
+    &__icon-box {}
+
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    &__notification {}
+
+    &__user {}
+
+    &__user-photo {
+        height: 3.75rem;
+        border-radius: 50%;
+    }
+
+    &__user-name {}
+}
