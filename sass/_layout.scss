@@ -12,7 +12,7 @@
     font-size: 1.4rem; // increasing the placeholder text inside search bar (Search hotels)
     height: 7rem;
     background-color: var(--color-white);
-    border-bottom: var(--color-gray-light-2);
+    border-bottom: 1px solid var(--color-gray-light-2);
 
     // Putting the bookmark, chat, and profile pic icon as a flexbox
     display: flex;
@@ -41,7 +41,6 @@
     background-color: var(--color-white);
 
     // #TODO: Remove after done testing
-    background-color: orangered;
     height: 80rem;
 
     flex: 1; // flex: 1; basically says the element should grow as much as it can
