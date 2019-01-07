@@ -30,11 +30,19 @@
 
     // flex: grow shrink basis
     flex: 0 0 18%;
+
+    // Will put the legal text at the very bottom of the nav bar and keep the nav buttons stay at the top
+    display: flex;
+    flex-direction: column; // allows us to vertically manipulate
+    justify-content: space-between; // pushes elements to opposite sides
 }
 
 .hotel-view {
     background-color: var(--color-white);
+
+    // #TODO: Remove after done testing
     background-color: orangered;
+    height: 80rem;
 
     flex: 1; // flex: 1; basically says the element should grow as much as it can
 }
