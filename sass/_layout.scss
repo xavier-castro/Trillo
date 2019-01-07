@@ -44,6 +44,7 @@
 }
 
 .detail {
+    font-size: 1.4rem;
     display: flex; // makes description and user-reviews be side-by-side
     padding: 4.5rem;
     background-color: var(--color-gray-light-1);
@@ -51,7 +52,6 @@
 }
 
 .description {
-    font-size: 1.4rem;
     background-color: var(--color-white);
     box-shadow: var(--shadow-light);
     padding: 3rem;
@@ -60,6 +60,10 @@
 }
 
 .user-reviews {
-    background-color: yellowgreen;
     flex: 1; // fills out remaining space
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
