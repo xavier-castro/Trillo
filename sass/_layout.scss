@@ -24,6 +24,12 @@
     display: flex;
     justify-content: space-between; // `space-between` divides empty space between the user, search, and logo elements
     align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap; // we are allowing the items to wrap to a new line if it needs more space. This is for the search bar
+        align-content: space-around; // adds spacing between the header nav and search bar
+        height: 12rem;
+    }
 }
 
 // Enabling flexbox for sidebar and hotel view
@@ -63,6 +69,10 @@
     @media only screen and (max-width: $bp-medium) {
         padding: 3rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -75,6 +85,11 @@
     @media only screen and (max-width: $bp-medium) {
         padding: 2rem;
         margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
     }
 }
 
